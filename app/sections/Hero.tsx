@@ -2,11 +2,11 @@ import { OrbitingCircles } from "@/components/magicui/orbiting-circles";
 
 export function OrbitingCirclesDemo() {
   return (
-    <div className="relative flex h-[500px] w-full flex-col items-center justify-center overflow-hidden rounded-lg border bg-background md:shadow-xl">
-      <span className="pointer-events-none whitespace-pre-wrap bg-gradient-to-b from-black to-gray-300 bg-clip-text text-center text-8xl font-semibold leading-none text-transparent dark:from-white dark:to-black">
+    <>
+    <div className="relative flex h-[500px] w-full flex-col items-center justify-center overflow-hidden rounded-lg bg-background">
+      <span className="pointer-events-none whitespace-pre-wrap bg-gradient-to-b from-[#0000ff] to-gray-300 bg-clip-text text-center text-8xl font-semibold leading-none text-transparent dark:from-white dark:to-black">
         Connectly
       </span>
-
       <OrbitingCircles iconSize={40}>
         <Icons.reddit />
         <Icons.facobook />
@@ -21,6 +21,27 @@ export function OrbitingCirclesDemo() {
         <Icons.discord />
       </OrbitingCircles>
     </div>
+    <div className="flex items-center justify-center">
+    <button className="group relative inline-flex items-center justify-center gap-3 overflow-hidden rounded-xl bg-gradient-to-r from-[#0000ff] to-gray-300 px-8 py-3 text-white transition-all hover:scale-105 hover:shadow-xl">
+      <span className="font-semibold tracking-wide">
+        Download Now
+      </span>
+      <svg 
+        className="h-5 w-5 transition-transform group-hover:translate-x-1" 
+        fill="none" 
+        viewBox="0 0 24 24" 
+        stroke="currentColor"
+      >
+        <path 
+          strokeLinecap="round" 
+          strokeLinejoin="round" 
+          strokeWidth={2} 
+          d="M14 5l7 7m0 0l-7 7m7-7H3"
+        />
+      </svg>
+    </button>
+    </div>
+    </>
   );
 }
 

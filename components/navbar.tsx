@@ -5,6 +5,8 @@ import Link from "next/link"
 import { useTheme } from "next-themes"
 import { Moon, Sun, Menu, X } from "lucide-react"
 import { Button } from "@/components/ui/button"
+import Image from "next/image"
+import Logo from "@/app/public/logo.png"
 
 const Navbar = () => {
   const [mounted, setMounted] = useState(false)
@@ -23,12 +25,17 @@ const Navbar = () => {
   ]
 
   return (
-    <nav className="bg-background border-b">
+    <nav className="bg-background border">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex items-center justify-between h-16">
           <div className="flex items-center">
             <Link href="/" className="flex-shrink-0">
-              <span className="text-2xl font-bold text-primary">Connectly</span>
+              {/* <span className="text-2xl font-bold text-transparent bg-gradient-to-b from-[#0000ff] to-gray-300 bg-clip-text">Connectly</span> */}
+              <Image 
+              src={Logo}
+              alt="Logo"
+              height={60}
+              width={60}/>
             </Link>
           </div>
           <div className="hidden md:block">

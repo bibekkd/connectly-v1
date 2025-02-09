@@ -2,6 +2,14 @@
 
 import { cn } from "@/lib/utils";
 import { AnimatedList } from "@/components/magicui/animated-list";
+import Iphone15Pro from "@/components/magicui/iphone-15-pro"
+
+import {
+    useScroll,
+    motion,
+    useTransform,
+} from 'framer-motion';
+import { useRef } from "react";
 
 interface Item {
     name: string;
@@ -87,19 +95,34 @@ let notifications = [
     }: {
     className?: string;
     }) {
+        const heroRef = useRef(null);
+        const { scrollY } = useScroll({
+            target: heroRef,
+            offset: ["start start", "end end"],
+        });
+        
+        const y1 = useTransform(scrollY, [0, 300], [200, 0]);
+
     return (
-        <div
-        className={cn(
-            "relative flex h-[500px] w-full flex-col overflow-hidden rounded-lg border bg-background p-6 md:shadow-xl",
-            className,
-        )}
+        <motion.div 
+            className="flex flex-col items-center justify-center min-h-screen bg-background p-10 my-10"
+            style={{ y: y1 }}
         >
-        <AnimatedList>
-            {notifications.map((item, idx) => (
-            <Notification {...item} key={idx} />
-            ))}
-        </AnimatedList>
-        </div>
+            <Iphone15Pro className="w-full max-w-[300px] md:max-w-[400px] lg:max-w-[433px] drop-shadow-[0_0_30px_rgba(0,0,255,0.2)]">
+                <div
+                className={cn(
+                    "relative flex h-[500px] w-full flex-col overflow-hidden rounded-lg bg-background mt-10 p-6",
+                    className,
+                )}
+                >
+                    <AnimatedList>
+                        {notifications.map((item, idx) => (
+                        <Notification {...item} key={idx} />
+                        ))}
+                    </AnimatedList>
+                </div>
+            </Iphone15Pro>
+        </motion.div>
     );
 }
 
