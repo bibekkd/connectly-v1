@@ -5,6 +5,7 @@ import { AnimatedListDemo } from "./sections/Notifications";
 import AnimatedBeamMultipleOutputDemo from "@/components/animated-beam-multiple-inputs";
 import Iphone15ProDemo from "@/components/iphone-15-pro-demo-2";
 import { Preview } from "./sections/gravityDemo";
+import Heading from "@/components/Heading";
 
 export default function Home() {
   return (
@@ -12,6 +13,7 @@ export default function Home() {
       <Navbar/>
       <OrbitingCirclesDemo/>
       <AnimatedListDemo/> 
+      <Heading/>
       <AnimatedBeamMultipleOutputDemo/>   
     </div>
   );
