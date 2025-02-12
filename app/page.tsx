@@ -7,6 +7,9 @@ import Heading from "@/components/Heading";
 import { BentoDemo } from "./sections/Features";
 import { TestimonialsDemo } from "./sections/Testimonial";
 import SubHeading from "@/components/SubHeading";
+import { LogoCarouselDemo } from "./sections/Platforms";
+import WaitlistSection from "./sections/waitlist";
+import Footer from "./sections/footer";
 
 export default function Home() {
   return (
@@ -20,7 +23,10 @@ export default function Home() {
         <SubHeading title="Everything You Need in One Place"/>
         <BentoDemo/>
       </div>
+      <LogoCarouselDemo/>
       <TestimonialsDemo/>
+      <WaitlistSection/>
+      <Footer/>
     </div>
   );
 }
