@@ -3,9 +3,10 @@ import Navbar from "@/components/navbar";
 import { OrbitingCirclesDemo } from "./sections/Hero";
 import { AnimatedListDemo } from "./sections/Notifications";
 import AnimatedBeamMultipleOutputDemo from "@/components/animated-beam-multiple-inputs";
-import Iphone15ProDemo from "@/components/iphone-15-pro-demo-2";
-import { Preview } from "./sections/gravityDemo";
 import Heading from "@/components/Heading";
+import { BentoDemo } from "./sections/Features";
+import { TestimonialsDemo } from "./sections/Testimonial";
+import SubHeading from "@/components/SubHeading";
 
 export default function Home() {
   return (
@@ -13,8 +14,13 @@ export default function Home() {
       <Navbar/>
       <OrbitingCirclesDemo/>
       <AnimatedListDemo/> 
-      <Heading/>
-      <AnimatedBeamMultipleOutputDemo/>   
+      <Heading title="Unified as One." addedClassName="tracking-tighter font-semibold"/>
+      <AnimatedBeamMultipleOutputDemo/>
+      <div className="md:my-20">
+        <SubHeading title="Everything You Need in One Place"/>
+        <BentoDemo/>
+      </div>
+      <TestimonialsDemo/>
     </div>
   );
 }

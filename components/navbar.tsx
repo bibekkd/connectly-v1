@@ -4,7 +4,7 @@ import { useState, useEffect } from "react"
 import Link from "next/link"
 import { useTheme } from "next-themes"
 import { Moon, Sun, Menu, X } from "lucide-react"
-import { Button } from "@/components/ui/button"
+import { Button } from "@/components/ui/buttonX"
 import Image from "next/image"
 import Logo from "@/app/public/logo.png"
 
@@ -25,8 +25,8 @@ const Navbar = () => {
   ]
 
   return (
-    <nav className="bg-background border">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <nav className="bg-background/50 backdrop-blur-sm border-b fixed w-full top-0 z-50 drop-shadow-[0_0_30px_rgba(0,0,255,0.2)]">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 ">
         <div className="flex items-center justify-between h-16">
           <div className="flex items-center">
             <Link href="/" className="flex-shrink-0">
